@@ -48,10 +48,12 @@ def get_info():
 
     today = datetime.date.today()
 
-    if (dzimsana.month, dzimsana.day) > (today.month, today.day):
-        today.year =today.year -1
-
     vecums= today.year - dzimsana.year
+
+    if (dzimsana.month, dzimsana.day) > (today.month, today.day):
+        vecums= vecums - 1
+
+    
 
     listbox.insert(tk.END, f"Sveicāti {vards}! Jums ir {vecums} gadi.")
 
